@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   createAccount() {
-    toastr.info('Yay');
+    toastr.success('Yay');
   }
 
   showStep() {
