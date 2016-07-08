@@ -1,0 +1,265 @@
+@import '../../bower_components/bootstrap/less/bootstrap';
+@import '../../bower_components/toastr/toastr';
+@import (less) '../../bower_components/magnific-popup/dist/magnific-popup.css';
+
+/*
+ * Bootstrap overrides.
+ */
+@text-color: #58666f;
+@font-family-base: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@link-color: #363f34;
+@link-hover-color: #141718;
+
+@navbar-default-bg: #F5F7F8;
+@navbar-default-link-color: #353f44;
+@navbar-default-link-hover-bg: #f6f7f7;
+@navbar-default-link-active-bg: #f6f7f7;
+
+@btn-default-color: #58666e;
+@btn-default-border: #dee5e7;
+
+@btn-primary-color: #fff;
+@btn-primary-bg: #33AFEC;
+@btn-primary-border: #33AFEC;
+
+@btn-success-color: #fff;
+@btn-success-bg: #27d24b;
+@btn-success-border: #27d24b;
+
+@btn-info-color: #fff;
+@btn-info-bg: #23b7f5;
+@btn-info-border: #23b7f5;
+
+@btn-warning-color: #fff;
+@btn-warning-bg: #fac732;
+@btn-warning-border: #fac732;
+
+@btn-danger-color: #fff;
+@btn-danger-bg: #f15051;
+@btn-danger-border: #f15051;
+
+@panel-default-border: #dee5e7;
+@panel-border-radius: 2px;
+@panel-default-heading-bg: #f6f8f8;
+
+@screen-sm: 800px;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  margin-bottom: 220px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.singlebutton {
+  background-color: #3b5998 !important;
+  border-color: #fff !important;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0;
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+
+.base-color {
+  color: #33afec;
+}
+
+#logoimage {
+  width: 100px !important;
+}
+
+#avatar {
+  height: 35px;
+}
+
+.input-group {
+  padding: 12px;
+  width: 40%;
+}
+
+.table-responsive {
+  padding: 12px;
+}
+
+.panel-default > .panel-heading {
+  color: #333333;
+  background-color: #ddd;
+  border-color: #ddd;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  background-color: #2f323A;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+@media(min-width:768px) {
+  .side-nav {
+    position: fixed;
+    top: 66px;
+    left: 225px;
+    width: 225px;
+    margin-left: -225px;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+    background-color: #2f323A;
+    bottom: 0;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+    li {
+      display: block;
+      padding: 10px 10px 10px 10px;
+      text-decoration: none;
+      color: #fff;
+      width: 225px;
+      a {
+        color: #fff;
+
+        &:hover,
+        &:focus {
+          color: #fff;
+          text-decoration: none;
+          background-color: #272930;
+        }
+      }
+    }
+  }
+}
+
+.page-wrapper {
+  margin-left: 225px;
+  margin-top: 100px;;
+}
+
+.btn-job {
+  border-radius: 0;
+  padding: 1rem 2rem;
+}
+
+#tablist {
+  padding: 0.5rem 0;
+  margin-left: 0;
+  border-bottom: 1px solid #dce4e6;
+  margin-top: 40px;
+  li {
+    list-style: none;
+    margin: 0;
+    display: inline;
+    a {
+      font-weight: 500;
+      padding: 0.5rem 0.7rem 0.5rem;
+      border: 1px solid #dce4e6;
+      border-bottom: none;
+      background: #f5f7f8;
+      text-decoration: none;
+      border-top: 5px solid #677480;
+    }
+  }
+}
+
+#tablist li:first-child {
+  margin-left: 2rem;
+}
+
+#tablist li:first-child a {
+  border-right: 0;
+}
+
+#tablist li a:link { color: #677480; }
+#tablist li a:visited { color: #677480; }
+
+#tablist li a:hover
+{
+  background: white;
+}
+
+#tablist li a.active
+{
+  background: white;
+  padding-top: .75rem;
+  border-bottom: 1px solid white;
+  border-top: 5px solid #33afec;
+}
+
+.badge {
+  margin: 0 0 0 .2rem;
+  background-color: #dce4e6;
+  color: #677480;
+  padding: .15rem .75rem;
+  border-radius: 2rem;
+}
+
+td {
+  a {
+    color: #33afec;
+    &:hover {
+      color: #33afec;
+    }
+  }
+}
+
+.conversations {
+  list-style: none;
+  li {
+    &:first-child {
+      border-top: 0;
+    }
+    h3 {
+      margin-top: 0;
+      span {
+        font-weight: 600 !important;
+        color: #6A7480;
+      }
+    }
+  }
+}
+
+// Progress
+.progress {
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.progress-step {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
